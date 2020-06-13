@@ -1,0 +1,99 @@
+TXT usado para anotar as ideias e deficuldades que eu ia encotrando, linguagem informal 
+e mistura portugues com ingles, a ideia aqui era dar acesso ao meu modo de pensar para resolver o desafio.
+
+Apos receber o desafio foi desenvolvido essa ToDo List com o plano de acao a baixo.
+
+[x] = Web page to insert new data (payment) on plataform
+	[x] = payment formated 
+	*ID - automatically generated
+	*title - 5 and 100 chars
+	*value - float
+	*date - format y-m-d
+	*external tax - 5% of the payment and automatically calculated
+	*comments - by user choice
+ 	[x] = payment check on route
+	
+[x] = Web page to show all data {select(*)}
+	[x] = show: id
+		title,
+		value,
+		date,
+		external tax,
+		comments
+	[x] =  function that remove values
+		[x] =  remove from front
+		[x] = remove from SQL
+
+	[x] = function that update the data
+		[x] = update the front
+		[x] = update the SQL
+
+[] = Web page that support a xlsx file insert
+	first chalenger:
+	[] up a xlsx to the project folder
+	[] read the xlsx in the folder and record it in the database
+
+Primeiras ideias:
+	Ja sei como resolver o primeiro problema ( ja resolvi coisas parecidas antes),
+entao deve ser mais facil.
+	Dentre dos meus projetos anteriores 1 se destaca: um ToDo com a opção de remover tarefas
+(https://github.com/MatheusPrudencio/ToDo_CSR_SPA), assim irei construir o projeto em cima do front-end 
+construido para ele e realizando as alterações necessarias.	
+	Ja o segundo nao sei como resolver e vou ter que pesquisar.
+
+Tecnologias:
+	Uso de APIs REST para alimentar o front usando Node.js e Express.
+	Como os dados sao muito estruturados irei usar SQL no lugar do MongodB.
+	
+	Design pattern = MVC.   
+
+Hands on:
+
+- Primeiro fui até o projeto do ToDo e analisar como construir o projeto para caber nele.
+Para relembrar o projeto modifiquei a funcao add anterior para a atual que eu preciso.  
+	[x] = formatar form de adicionar payment.
+
+- Agora que sei como o front vai funcionar sei que apenas irei precisar de APIS REST pois o front é CSR e SPA.
+
+- Comecei a trabalhar no SQL.
+	Decidi trabalhar com sqlite por ser mais simples e knex por estar acostumado.
+	[x] = iniciar knex.
+	[x] = iniciar sqlite.
+	[x] = iniciar migration.
+		Error: SQLITE_CANTOPEN: unable to open database file. Acredito que por estar usando Vagrant
+		o knex migrate:latest o path nao estava sincronizado.
+
+		Solução: Depois de tentar concertar o SQLite e não conseguir troquei o bd para o postgres
+
+	[x] = criar schemas
+
+- Rotas mais simples
+	[x] = get all payments
+	[x] = add new payment
+		* Lembrete: verificacao de > 5 no title (feito)
+
+- Front-end funcionalidades simples
+	[x] = get all payments
+	[x] = add new payment
+		Aqui foi desprendido algum tempo adapitando o front end do projeto ToDo para o Payments,
+		mas como esse nao é foco do desafio o front ficou bastante bagunçado e com varias variaveis com nomes 
+		que nao fazem sentido, apesar disso esta funcional. 
+
+
+- Remove data
+	[x] = beck
+	[x] = front
+		Aqui foi desprendido algum tempo no front, para resolver o problemas de incompatividade entre a comunicacao
+		antiga para a que foi feita para este desafio, pois a API funcionava no Insognia e nao usando o botao de delete 
+
+- Set data
+	[x] = beck
+	[x] = front
+		Utilizei um artigo para adptar meu front end para o beck que eu havia criado (https://www.devmedia.com.br/como-tornar-uma-tabela-html-editavel-com-jquery/26899)
+
+
+
+
+
+
+

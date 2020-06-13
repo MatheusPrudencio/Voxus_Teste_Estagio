@@ -1,0 +1,20 @@
+{
+  "name": "voxus",
+  "version": "1.0.0",
+  "description": "Voxus intern challenger",
+  "main": "index.js",
+  "scripts": {
+    "start": "server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "pg": "^8.2.1",
+    "toast": "^0.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

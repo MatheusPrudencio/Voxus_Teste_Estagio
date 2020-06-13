@@ -1,0 +1,181 @@
+body {
+    background: #f9e933;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    min-width: 855px;
+}
+
+header .container, main .container, footer .container {
+    max-width: 855px;
+    margin: auto;
+}
+
+header {
+    padding: 25px 0 25px 0;
+    background: white;
+    border-bottom: 1px solid #dddddd;
+    overflow: auto;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-size: 3em;
+    color: #b33;
+    float: left;
+    width: 570px;
+}
+
+a {
+    color: #f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+    width: 285px;
+}
+
+main {
+    background: white;
+    border-radius: 0 5px 5px 5px;
+    padding: 40px;
+}
+
+.tabs a span {
+    border-radius: 5px 5px 0 0;
+    background: #ddd;
+    padding: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.tabs a .active {
+    background: #eee;
+}
+
+main .content {
+    padding: 30px 10px 30px 10px;
+    border-radius: 0 5px 5px 5px;
+    background: #eee;
+}
+
+main .content li {
+    border-radius: 5px;
+    padding: 3px;
+    background: #eff;
+    margin: 0 0 10px 0;
+}
+
+main .content label {
+    color: red;
+    margin: 30px 0 0 0;
+    display: block;
+}
+
+main .content label:first-child {
+    margin-top: 10px;
+}
+
+main .content input {
+    font-size: 1.5em;
+}
+
+main .content button {
+    font-weight: bold;
+    padding: 0 3px 0 3px;
+    border-radius: 5px;
+    background: #ccc;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 1.3em;
+}
+
+/* TODO: incluir os estilos para o agrupamento via tags */
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 40px 0 20px 0;
+}
+
+footer .contact {
+    float: left;
+    width: 570px;
+}
+
+h5 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+footer .contact p:nth-child(2) {
+    color: #b33;
+    font-style: italic;
+}
+
+footer .sitemap {
+    float: right;
+    width: 285px;
+}
+
+footer ul {
+    width: 230px;
+}
+
+li {
+    list-style: none;
+}
+
+footer .sitemap .left {
+    float: left;
+}
+
+footer .sitemap .right {
+    float: right;
+}
+
+#error {
+    color: red;
+    font-size: 30px;
+}
+
+p {
+    margin: auto;
+}
+
+.remove {
+    background-color: red;
+}
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+tr{
+    border-top: 1px solid gray ;
+    border-bottom: 1px solid gray ;
+    border-left: 1px solid grey;
+}
+
+th, td{
+    padding: 5px;
+    border-right: 1px solid grey;
+}
+
+.tabelaEditavel .celulaEmEdicao {
+    padding: 0;
+}
+ 
+.tabelaEditavel .celulaEmEdicao input[type=text]{
+    width:100%;
+    border:0;
+    background-color:rgb(255,253,210);  
+}

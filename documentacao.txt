@@ -1,0 +1,49 @@
+Por motivos do desafio apenas sera documentado o beckend.
+
+A ferramenta escolhida para realizar o desafio foi o Node.js com o express.js.
+
+Para rodar o programa:
+
+Inicialmente configura no knexfile.js seu user e password do postgres
+
+Para iniciar use os comando:
+    npm install => para instalar as dependencias
+    npm knex migrate:latest => para criar o banco de dados
+    npm knex seed:run => para popular o bd com exemplos teste
+
+    agora o site estara rodando na porta 3000
+
+Funcionalidades:
+    Uma CRUD completa com com suas fucionalidades no site
+
+    Na aba Newest esta a listagem de todos os dados 
+
+    Nela é possivel excluir qualquer dado clicando no X
+
+    E atualizar qualquer dando um dbclick no mesmo, para confirmar o update aperte enter
+
+    Na aba add é possivel adicionar novos dados na tabela.
+
+    ATENCAO: O front nao esta otimizado, apertar F5 para conferir se o server atualizou
+
+Codigo
+
+O banco de dados e o Postgres e nele e criado a tabela payments, onde sera feito todo o processo.
+
+o Id e gerado pelo banco atraves de incrementacao.
+
+Sao 4 controllers: 
+
+list e um get que devolve todos os dados da tabela payments no banco de dados
+
+add adiciona ao bd recebendo {title, value, date, comments} como parametros e calcula a 
+externaTax é calculada por esse controler e adicionada no bd, o id é gerado pelo Banco de dados.
+ele verifica tambem se o title e menor que 5 e o bd so aceita ate 100 char.
+
+remove permite remover um id presente no bd
+
+update funciona atualizando toda a linha, nao apenas o valor atualizado, basicamente ele compara o valor
+que ja esta no banco com o valor que sera atualizado e apartir disso faz verificacoes para bater com as mesmas
+especificacoes do add. 
+
+na View possui todo o Front end, que e basicamente uma SPA com CSR.
